@@ -7,6 +7,7 @@ import { DatePipe, registerLocaleData } from '@angular/common';
 import localeAr from '@angular/common/locales/ar';
 import { CommonModule } from '@angular/common';
 import { pipe } from 'rxjs';
+import { DateComponent } from "./date/date.component";
 
 registerLocaleData(localeAr);
 
@@ -17,7 +18,7 @@ registerLocaleData(localeAr);
   selector: 'app-root',
   providers: [{ provide: LOCALE_ID, useValue: 'ar' }],
   standalone: true,
-  imports: [RouterOutlet,DatePipe],
+  imports: [RouterOutlet, DatePipe, DateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
