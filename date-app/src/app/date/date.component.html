@@ -1,0 +1,77 @@
+<div class="container my-5">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row" style="direction:rtl;">
+        <div class="col text-center">
+            <div class="card" style="border: 2px solid#97c4d9; background-color: #f0f2f5;width: 800px;">
+                <div class="row justify-content-center">
+                            
+                    <div class="col-2">
+                        <button class="btn btn-title-up btn-primary d-inline-block mb-4" >من الميلادي إلى الهجري</button>
+                    </div>
+                </div>
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-2 btn-title">
+                                <button class="btn btn-white d-inline-block mb-4 btn-overlay">التاريخ الميلادي</button>
+                            </div>
+                        </div>
+                    
+                    <div class="card-body">
+                        <form>
+                            <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+
+                                <div class="col-auto">
+                                    <label for="day" class="form-label">اليوم</label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <input type="number" class="form-control" id="day" name="day" min="1" max="31" [(ngModel)]="md">
+                                </div>
+
+                                <div class="col-auto">
+                                    <label for="month" class="form-label">الشهر</label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <input type="number" class="form-control" id="month" name="month" [(ngModel)]="mm" >
+                                </div>
+
+                                <div class="col-auto">
+                                    <label for="year" class="form-label">السنة</label>
+                                </div>
+
+                                <div class="col-auto">
+                                    <input type="number" class="form-control" id="year" name="year" min="1" [(ngModel)]="my">
+                                </div>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary " (click)="calDate()">تحويل</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="result mt-4">
+               <table class="table table-bordered" style="width: 800px;">
+                   <tbody style="direction: rtl;">
+                       <tr >
+                           <th>التاريخ الهجري</th>
+                           <td>{{hijriDate}}</td>
+                           
+                       </tr>
+                       <tr>
+                           <th>اليوم</th>
+                           <td>{{miladiDate | date : 'EEEE'}}</td>
+                           
+                       </tr>
+                   </tbody>
+               </table>
+           </div>   
+           </div>
+    </div>
+   
+    
+</div>
